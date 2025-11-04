@@ -12,14 +12,16 @@ Kirigami.FormLayout {
     property alias cfg_speed: speed.value
     property alias cfg_mirror: mirror.checked
     property alias cfg_hq: hq.checked
-    property var cfg_playthemesong
-    property alias cfg_themesongloops: themesongloops.value
     property alias cfg_gifpath: gifpath.text
     property var cfg_gifpathDefault
 
+    property var cfg_playthemesong
+    property alias cfg_themesongloops: themesongloops.value
+    property alias cfg_themepath: themepath.text
+    property var cfg_themepathDefault
+
     Slider {
         id: speed
-
         Layout.preferredWidth: 15 * Kirigami.Units.gridUnit
         from: 0.6
         to: 10
@@ -37,6 +39,45 @@ Kirigami.FormLayout {
         id: hq
 
         Kirigami.FormData.label: i18n("High render quality")
+    }
+
+    RowLayout {
+        Kirigami.FormData.label: i18n("Path to GIF:")
+        TextField {
+            id: gifpath
+            placeholderText: i18n("No file selected.")
+        }
+        Button {
+            text: i18n("Browse")
+            icon.name: "folder-symbolic"
+            onClicked: gifFileDialogLoader.active = true
+
+            Loader {
+                id: gifFileDialogLoader
+                active: false
+
+                sourceComponent: FileDialog {
+                    id: gifFileDialog
+                    nameFilters: [
+                        i18n("GIF", "*.gif"),
+                        i18n("All files (%1)", "*"),
+                    ]
+                    onAccepted: {
+                        gifpath.text = gifFileDialog.selectedFile
+                        gifFileDialogLoader.active = false
+                    }
+                    onRejected: {
+                        gifFileDialogLoader.active = false
+                    }
+                    Component.onCompleted: open()
+                }
+            }
+        }
+        Button {
+            text: i18n("Reset default")
+            icon.name: "edit-reset"
+            onClicked: gifpath.text = cfg_gifpathDefault
+        }
     }
 
     ComboBox {
@@ -63,33 +104,33 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        Kirigami.FormData.label: i18n("Path to GIF:")
+        Kirigami.FormData.label: i18n("Path to theme song:")
 
         TextField {
-            id: gifpath
+            id: themepath
             placeholderText: i18n("No file selected.")
         }
         Button {
             text: i18n("Browse")
             icon.name: "folder-symbolic"
-            onClicked: fileDialogLoader.active = true
+            onClicked: themeFileDialogLoader.active = true
 
             Loader {
-                id: fileDialogLoader
+                id: themeFileDialogLoader
                 active: false
 
                 sourceComponent: FileDialog {
-                    id: fileDialog
+                    id: themeFileDialog
                     nameFilters: [
-                        i18n("GIF", "*.gif"),
+                        i18n("WAV", "*.wav"),
                         i18n("All files (%1)", "*"),
                     ]
                     onAccepted: {
-                        gifpath.text = fileDialog.selectedFile
-                        fileDialogLoader.active = false
+                        themepath.text = themeFileDialog.selectedFile
+                        themeFileDialogLoader.active = false
                     }
                     onRejected: {
-                        fileDialogLoader.active = false
+                        themeFileDialogLoader.active = false
                     }
                     Component.onCompleted: open()
                 }
@@ -98,7 +139,7 @@ Kirigami.FormLayout {
         Button {
             text: i18n("Reset default")
             icon.name: "edit-reset"
-            onClicked: gifpath.text = cfg_gifpathDefault
+            onClicked: themepath.text = cfg_themepathDefault
         }
     }
 

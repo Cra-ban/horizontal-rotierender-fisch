@@ -21,7 +21,7 @@ PlasmoidItem {
 
     SoundEffect {
         id: themeSong
-        source: plasmoid.configuration.playthemesong != "Never" ? "stockmarket.wav" : ""
+        source: plasmoid.configuration.playthemesong != "Never" ? plasmoid.configuration.themepath : ""
         loops: plasmoid.configuration.themesongloops
         muted: plasmoid.configuration.playthemesong == "Never"
 
