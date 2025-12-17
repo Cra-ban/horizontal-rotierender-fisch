@@ -1,3 +1,10 @@
+# HORIZONTAL ROTIERENDER FISCH
+does what it says
+
+description of widget I forked this from
+|
+|
+V
 # Maxwell 
 
 Maxwell the carryable cat, now as a KDE Plasma Widget
