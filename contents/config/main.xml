@@ -22,7 +22,7 @@
             <default>fish-spin.gif</default>
         </entry>
         <entry name="themepath" type="Path">
-            <default>horizontal-rotierender-fisch.mp3</default>
+            <default>horizontal-rotierender-fisch.wav</default>
         </entry>
     </group>
 </kcfg>
