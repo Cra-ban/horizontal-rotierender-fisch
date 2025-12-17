@@ -1,2 +1,2 @@
 mkdir -p build
-tar cfJ build/maxwell.tar.xz contents/ metadata.json
+tar cfJ build/horizontal-rotierender-fisch.tar.xz contents/ metadata.json

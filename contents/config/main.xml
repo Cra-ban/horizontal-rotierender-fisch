@@ -19,10 +19,10 @@
             <default>1</default>
         </entry>
         <entry name="gifpath" type="Path">
-            <default>maxwell-spinning.gif</default>
+            <default>fish-spin.gif</default>
         </entry>
         <entry name="themepath" type="Path">
-            <default>stockmarket.wav</default>
+            <default>horizontal-rotierender-fisch.mp3</default>
         </entry>
     </group>
 </kcfg>

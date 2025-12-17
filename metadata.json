@@ -7,13 +7,13 @@
             }
         ],
         "Category": "Fun and Games",
-        "Description": "Maxwell, the desktop cat",
+        "Description": "HORIZONTAL ROTIERENDER FISCH",
         "Icon": "emblem-favorite-symbolic",
-        "Id": "maxwell",
+        "Id": "horizontal-rotierender-fisch",
         "License": "GPL3",
-        "Name": "Maxwell",
+        "Name": "Horizontal Rotierender Fisch",
         "BugReportUrl": "https://github.com/wilversings/maxwell/issues",
-        "Website": "https://github.com/wilversings/maxwell",
+        "Website": "https://github.com/Cra-ban/horizontal-rotierender-fisch",
         "Version": "1.1.0"
     },
     "X-Plasma-API-Minimum-Version": "6.0"
