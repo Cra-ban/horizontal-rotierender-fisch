@@ -13,7 +13,7 @@
             <default>true</default>
         </entry>
         <entry name="playthemesong" type="String">
-            <default>On Double Click</default>
+            <default>On Click</default>
         </entry>
         <entry name="themesongloops" type="Int">
             <default>1</default>
