@@ -8,9 +8,7 @@ open widgets manager > Get new > Install Widget From Local File
 then choose the archive that was generated in build folder
 
 description of widget I forked this from
-|
-|
-V
+
 # Maxwell 
 
 Maxwell the carryable cat, now as a KDE Plasma Widget
